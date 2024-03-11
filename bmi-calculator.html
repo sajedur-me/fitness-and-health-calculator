@@ -26,20 +26,14 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
 
                                 <div class="calculus--input">
                                     <h4>Calculate</h4>
                                     <div class="stroke-shape mb-3"></div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
-
-                                <div class="calculus--output">
-                                    <h4>Result</h4>
-                                    <div class="stroke-shape mb-3"></div>
+                                    <link rel="stylesheet" href="https://embed.calculoid.com/styles/main.css" />
+                                    <script src="https://embed.calculoid.com/scripts/combined.min.js"></script>
+                                    <div ng-app="calculoid" ng-controller="CalculoidMainCtrl" ng-init="init({calcId:64,apiKey:''})" ng-include="load()"></div>
 
                                 </div>
 
@@ -124,7 +118,11 @@
         .all--links {
             margin-top: 15px;
         }
-
+        
+        /* Third-party app link */
+        .signature-div.ng-scope  {
+            display: none;
+        }
 
     </style>
 </body>

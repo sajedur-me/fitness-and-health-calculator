@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://gymnearx.com/css/style.css">
 
 </head>
-<body> 
+<body>  
     
     <section class="all--calculators--main--section">
         <div class="container">
@@ -43,7 +43,7 @@
                                         <p>
                                             <label for="hours">Body Weight: </label>
                                             <input class="fix-width fix-width-100" type="text" id="hours" name="hours" value="70">  
-                                            <select name="activity" id="activity" class="fix-width-100">
+                                            <select name="Weight" id="Weight" class="fix-width-100">
                                                 <option value="K">kilograms</option>
                                                 <option value="P">pounds</option>
                                             </select>                                
@@ -51,7 +51,7 @@
                                         <p>
                                             <label for="activity">Activity: </label>
                                             <select name="activity" id="activity">
-                                                <option value="-----">--- Select One ---</option>
+                                                <option value="-----" selected>--- Select One ---</option>
                                                 <option value="WRCS">Walking, Running, Cycling, Swimming</option>
                                                 <option value="GA">Gym Activities</option>
                                                 <option value="TASA">Training and Sports Activities</option>
@@ -59,7 +59,7 @@
                                                 <option value="HADLA">Home & Daily Life Activities</option>
                                             </select>                                
                                         </p>
-                        
+                                        
                                         <p>
                                             <input class="theme-btn gradient-btn mt-2 width-100" type="submit" value="Calculate 👉"> 
                                         </p>
@@ -78,7 +78,7 @@
                                     <div class="rightresult">
                                         <div class="result--display">
                                             <div class="bigtext" style="margin-top:5px;">
-                                                <h5><b>Conducting the activity, Walking: slow, for 45 minutes will burn around <strong style="color: #f8c401;"> 110 calories.</strong></h5>
+                                                <h5>Conducting the activity, Walking: slow, for 45 minutes will burn around <strong style="color: #f8c401;"> 110 calories.</strong></h5>
                                             </div>
                         
                                         </div>
@@ -120,11 +120,7 @@
     <script src="https://gymnearx.com/js/jquery-3.4.1.min.js" defer=""></script>
     <script src="https://gymnearx.com/js/bootstrap.min.js" defer></script>
 
-</body>
-
-
     <style>
-        
 
         /* Global CSS */
         @import url('https://fonts.cdnfonts.com/css/route-159'); 
@@ -168,6 +164,12 @@
         .guide--lists li::marker {
             color: #f8c401;
             font-size: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 4px 10px;
+            border: 1px solid rgba(128, 137, 150, 0.3);
         }
 
 

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    
+     
     <section class="all--calculators--main--section">
         <div class="container">
 
@@ -25,26 +25,102 @@
                             <p>The following is a complete list of our fitness and health related calculators.</p>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-
+                        <div class="row row--card">
+                            <div class="col-md-5">
+ 
                                 <div class="calculus--input">
                                     <h4>Calculate</h4>
                                     <div class="stroke-shape mb-3"></div>
 
+                                    <form class="bmi--cal" action="#">
+                                        <p>
+                                            <label for="age">Age:</label>
+                                            <input class="fix-width" type="number" id="age" name="age" min="2" max="120" value="25">   
+                                        </p>
+                                        <p>
+                                            <label for="height">Height: </label>
+                                            <input class="fix-width" type="text" id="height" name="height" value="180">  
+                                            <span class="inuickspan">cm</span>  
+                                        </p>
+                                        <p>
+                                            <label for="weight">Weight: </label>
+                                            <input class="fix-width" type="text" id="weight" name="weight" value="70"> 
+                                            <span class="inuickspan">kg</span>   
+                                        </p>
+                                        <p>
+                                            <p>Age 14 or younger?:</p>
+                                            <input class="input-radio on" type="radio" id="yes" name="younger" value="Yes">
+                                            <label for="yes">Yes</label>
+
+                                            <input class="input-radio on" type="radio" id="no" name="younger" value="No" checked>
+                                            <label for="no">No</label>
+                                        </p>
+                                        <p>
+                                            <p>Gender:</p>
+                                            <input class="input-radio on" type="radio" id="male" name="gender" value="Male" checked>
+                                            <label for="male">Male</label>
+
+                                            <input class="input-radio on" type="radio" id="female" name="gender" value="Female">
+                                            <label for="female">Female</label>
+                                        </p>
+                                        <p>
+                                            <input class="theme-btn gradient-btn mt-2 width-100" type="submit" value="Calculate 👉"> 
+                                        </p>
+
+                                    </form>
+
                                 </div>
 
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-7">
 
                                 <div class="calculus--output">
                                     <h4>Result</h4>
                                     <div class="stroke-shape mb-3"></div>
 
+                                    <div class="rightresult">
+                                        <div class="result--display">
+                                            <p class="mb-2">The lean body mass based on different formulas:</p>
+                                            <table class="bfc--table">  
+                                                <tr>
+                                                    <th>Formula</th>
+                                                    <th>Body Mass</th>
+                                                    <th>Body Fat</th>
+                                                </tr>                                                                                                
+                                                <tr>
+                                                    <td>Boer1</td>
+                                                    <td><strong>53.3 kg (89%)</strong></td>
+                                                    <td>11%</td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td>James2</td>
+                                                    <td><strong>51.8 kg (86%)</strong></td>
+                                                    <td>14%</td>
+                                                </tr>
+                                            
+                                                <tr>
+                                                    <td>Hume3</td>
+                                                    <td><strong>51.2 kg (85%)</strong></td>
+                                                    <td>15%</td>
+                                                </tr>
+                                                                                                                                    
+                                            </table>
+
+                                        </div>
+
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
+
+                        <div class="section--article mt-5 calculate--article">
+                            <p>The Body Mass Index (BMI) Calculator can be used to calculate BMI value and corresponding weight status while taking age into consideration. Use the "Metric Units" tab for the International System of Units or the "Other Units" tab to convert units into either US or metric units. Note that the calculator also computes the Ponderal Index in addition to BMI, both of which are discussed below in detail.</p>
+                            <h3>BMI introduction</h3>
+                            <p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator.</p>
+                        </div>
+
 
                         <a href="index.html" class="theme-btn gradient-btn mt-5"><i class="fa fa-arrow-left mr-2"></i> All Calculators</a>
                     </div>
@@ -72,8 +148,8 @@
     <style>
         
 
-        /* Global CSS */
-        @import url('https://fonts.cdnfonts.com/css/route-159'); 
+ /* Global CSS */
+ @import url('https://fonts.cdnfonts.com/css/route-159'); 
         .padding--30 {
             padding: 30px;
         }
@@ -97,7 +173,65 @@
         p {
             font-size: 18px;
         }
+        .calculate--article p {
+            margin-bottom: 15px;
+            line-height: 1.7em;
+        }
+        .calculate--article h2, h3 {
+            margin: 40px 0 15px;
+        }
+        .guide--lists ul.lists {
+            padding-left: 20px;
+        }
+        .guide--lists li {
+            list-style-type: disc;
+            margin-bottom: 8px;
+        }
+        .guide--lists li::marker {
+            color: #f8c401;
+            font-size: 20px;
+        }
 
+        select {
+            width: 100%;
+            padding: 4px 10px;
+        }
+        select:focus-visible {
+            outline: none;
+        }
+
+        /* Card Boxs */
+        .row--card {
+            border: 1px solid #EEEEEE;
+            padding: 30px;
+            border-radius: 20px;
+            background: #FAFAFA;
+        }
+
+        .calculus--output .result--display {
+            background: #FFFFFF;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #EEEEEE;
+        }
+
+        /* Table */
+        table.bfc--table {
+            width: 100%;
+        }
+        table.bfc--table tr {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            border: 1px solid #FFFFFF;
+        }
+        table.bfc--table tr:nth-child(odd) {
+            background-color: #F5F5F5;
+        }
+        table.bfc--table tr:nth-child(even) {
+            background-color: #FAFAFA;
+        }
 
 
         /* Section CSS */
@@ -106,11 +240,11 @@
         }
         .main--cal--bg {
             background-color: #FFFFFF;
-            box-shadow: 0px 0px 30px -10px rgba(201.00000000000003, 201.00000000000003, 201.00000000000003, 0.5);
+            box-shadow: 0px 0px 30px -10px rgba(201.0, 201.0, 201.0, 0.5);
         }
         .sidebar--bg {
             background-color: #FFFFFF;
-            box-shadow: 0px 0px 30px -10px rgba(201.00000000000003, 201.00000000000003, 201.00000000000003, 0.5);
+            box-shadow: 0px 0px 30px -10px rgba(201.0, 201.0, 201.0, 0.5);
             height: 100vh;
         }
         .section--heading {
@@ -123,6 +257,41 @@
         }
         .all--links {
             margin-top: 15px;
+        }
+
+        form.bmi--cal input, form.bmi--cal select {
+            border: 1px solid rgba(128, 137, 150, 0.3);
+        }
+        form.bmi--cal input.fix-width {
+            width: 180px;
+            padding: 4px 10px;
+        }
+        form.bmi--cal label {
+            width: 50px;
+            margin-right: 15px;
+        }
+        form.bmi--cal p {
+            margin-bottom: 15px;
+        }
+        form.bmi--cal span.inuickspan {
+            margin-left: -40px;
+        }
+
+        form.bmi--cal .input-radio {
+            box-shadow: 0px 0px 0px 1px rgba(128, 137, 150, 0.3);;
+            font-size: 3em;
+            width: 15px;
+            height: 15px;
+            margin-right: 7px;
+            border: 2px solid #fff;
+            background-clip: border-box;
+            appearance: none;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            border-radius: 100%;
+        }
+        .input-radio.on:checked {
+            box-shadow: 0px 0px 0px 5px rgb(248 196 1 / 28%);
+            background-color: #f8c401;
         }
 
 
